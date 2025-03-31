@@ -9,8 +9,8 @@ func _input(event):
 		$"Container/Bad-nogwatText".visible = false
 		$Container/Stausee_tekst.visible = false
 		$Container/BadMinNogwattesText.visible = false
-	#elif event.is_action_pressed("escape")
-		
+	elif event.is_action_pressed("escape"):
+		get_tree().quit()
 
 func _on_back_pressed():
 	get_tree().change_scene_to_file("res://scenes/game.tscn")
@@ -59,4 +59,4 @@ func _on_knie_mouse_entered():
 	$Container/KniebisHighlight.visible = true
 
 func _on_knie_mouse_exited():
-	$Container/Orginele_kaart/knie.visible
+	$Container/KniebisHighlight.visible = false
