@@ -51,3 +51,12 @@ func _on_bad_min_nog_mouse_entered():
 
 func _on_bad_min_nog_mouse_exited():
 	$Container/BadMinNogwattesHighL.visible = false
+
+func _on_knie_pressed():
+	pass
+
+func _on_knie_mouse_entered():
+	$Container/KniebisHighlight.visible = true
+
+func _on_knie_mouse_exited():
+	$Container/Orginele_kaart/knie.visible

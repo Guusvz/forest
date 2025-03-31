@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://cr8yd8731jvp1"]
+[gd_scene load_steps=34 format=3 uid="uid://cr8yd8731jvp1"]
 
 [ext_resource type="Texture2D" uid="uid://dqvm3fny5d8tq" path="res://assets/Map/Kaart.png" id="1_4xfga"]
 [ext_resource type="Script" uid="uid://dhefrukkj8ir" path="res://Scripts/map.gd" id="1_gldc4"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://dj8cw2gt43dy8" path="res://assets/Map/bad nogwattess highlight.png" id="5_2lpho"]
 [ext_resource type="Texture2D" uid="uid://ci8m6kbaart0d" path="res://assets/Map/Stausee highL.png" id="6_jh32y"]
 [ext_resource type="Texture2D" uid="uid://dxhe6jqjupn5j" path="res://assets/Map/Bad min nogwattes highL.png" id="7_blm8a"]
+[ext_resource type="Texture2D" uid="uid://cyoni8swsetbf" path="res://assets/Map/Kniebis highlight.png" id="7_wslke"]
 [ext_resource type="Texture2D" uid="uid://dceu840cjaw03" path="res://assets/Map/bad-nogwat text.png" id="8_be0no"]
 [ext_resource type="Texture2D" uid="uid://ho36ghxv8udl" path="res://assets/Map/stausee.png" id="9_be0no"]
 
@@ -161,6 +162,14 @@ offset_top = -36.8281
 offset_right = -16.0799
 offset_bottom = -28.8281
 
+[node name="knie" type="Button" parent="Container/Orginele_kaart"]
+show_behind_parent = true
+offset_left = -14.8905
+offset_top = -65.2054
+offset_right = -6.89049
+offset_bottom = -57.2054
+scale = Vector2(1.04936, 0.5)
+
 [node name="Glaswald highL" type="Sprite2D" parent="Container"]
 visible = false
 visibility_layer = 2
@@ -179,6 +188,12 @@ visible = false
 position = Vector2(576, 324)
 scale = Vector2(4.5, 4.5)
 texture = ExtResource("6_jh32y")
+
+[node name="KniebisHighlight" type="Sprite2D" parent="Container"]
+visible = false
+position = Vector2(576, 324)
+scale = Vector2(4.5, 4.5)
+texture = ExtResource("7_wslke")
 
 [node name="BadMinNogwattesHighL" type="Sprite2D" parent="Container"]
 visible = false
@@ -246,4 +261,7 @@ text = "back"
 [connection signal="mouse_entered" from="Container/Orginele_kaart/bad_min_nog" to="." method="_on_bad_min_nog_mouse_entered"]
 [connection signal="mouse_exited" from="Container/Orginele_kaart/bad_min_nog" to="." method="_on_bad_min_nog_mouse_exited"]
 [connection signal="pressed" from="Container/Orginele_kaart/bad_min_nog" to="." method="_on_bad_min_nog_pressed"]
+[connection signal="mouse_entered" from="Container/Orginele_kaart/knie" to="." method="_on_knie_mouse_entered"]
+[connection signal="mouse_exited" from="Container/Orginele_kaart/knie" to="." method="_on_knie_mouse_exited"]
+[connection signal="pressed" from="Container/Orginele_kaart/knie" to="." method="_on_knie_pressed"]
 [connection signal="pressed" from="Container/back" to="." method="_on_back_pressed"]
