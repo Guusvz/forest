@@ -8,10 +8,17 @@ func _input(event):
 func _on_glaswald_pressed() -> void:
 	$"Glaswald text".visible = true 
 
-
 func _on_glaswald_mouse_entered() -> void:
-	$"Orginele_kaart".visible = false
+	$"Glaswald highL".visible = true
 
-			#$"Orginele_kaart".visible = true
-#func _on_glaswald_mouse_exited() -> void:
-	#$"Orginele_kaart".visible = true 
+func _on_glaswald_mouse_exited() -> void:
+	$"Glaswald highL".visible = false
+
+func _on_badnog_pressed():
+	pass
+
+func _on_badnog_mouse_entered():
+	$BadNogwattessHighlight.visible = true
+
+func _on_badnog_mouse_exited():
+	$BadNogwattessHighlight.visible = false

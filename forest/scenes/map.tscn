@@ -1,26 +1,22 @@
-[gd_scene load_steps=6 format=3 uid="uid://cr8yd8731jvp1"]
+[gd_scene load_steps=10 format=3 uid="uid://cr8yd8731jvp1"]
 
 [ext_resource type="Texture2D" uid="uid://dqvm3fny5d8tq" path="res://assets/Map/Kaart.png" id="1_4xfga"]
 [ext_resource type="Script" uid="uid://dhefrukkj8ir" path="res://Scripts/map.gd" id="1_gldc4"]
 [ext_resource type="Texture2D" uid="uid://bdcpub6thuc41" path="res://assets/Map/Glaswald_text.png" id="3_0cso3"]
 [ext_resource type="Script" uid="uid://oqqcs8cltkn8" path="res://Scripts/orginele_kaart.gd" id="3_2klcf"]
 [ext_resource type="Texture2D" uid="uid://c1er751llo1jc" path="res://assets/Map/Glaswald_highlighted_kaart.png" id="4_2lpho"]
+[ext_resource type="Texture2D" uid="uid://dj8cw2gt43dy8" path="res://assets/Map/bad nogwattess highlight.png" id="5_2lpho"]
+
+[sub_resource type="Theme" id="Theme_2klcf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2lpho"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nakos"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [node name="map" type="Node2D"]
 script = ExtResource("1_gldc4")
-
-[node name="Glaswald text" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(576, 324)
-scale = Vector2(4.5, 4.5)
-texture = ExtResource("3_0cso3")
-
-[node name="Glaswald highL" type="Sprite2D" parent="."]
-visible = false
-visibility_layer = 2
-position = Vector2(576, 324)
-scale = Vector2(4.5, 4.5)
-texture = ExtResource("4_2lpho")
 
 [node name="Orginele_kaart" type="Sprite2D" parent="."]
 position = Vector2(576, 324)
@@ -29,12 +25,62 @@ texture = ExtResource("1_4xfga")
 script = ExtResource("3_2klcf")
 
 [node name="Glaswald" type="Button" parent="Orginele_kaart"]
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(1, 1, 1, 0)
 show_behind_parent = true
 offset_left = -85.0
 offset_top = -40.0
 offset_right = -69.0
 offset_bottom = -29.0
+theme = SubResource("Theme_2klcf")
+theme_override_colors/icon_hover_color = Color(0, 1, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+
+[node name="badnog" type="Button" parent="Orginele_kaart"]
+show_behind_parent = true
+offset_left = -41.5556
+offset_top = -44.4444
+offset_right = -29.5556
+offset_bottom = -36.4444
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 0)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 0)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
+theme_override_colors/font_color = Color(0, 0, 0, 0)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 0)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 0)
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_2lpho")
+theme_override_styles/normal = SubResource("StyleBoxFlat_nakos")
+
+[node name="Glaswald highL" type="Sprite2D" parent="."]
+visible = false
+visibility_layer = 2
+position = Vector2(576, 324)
+scale = Vector2(4.5, 4.5)
+texture = ExtResource("4_2lpho")
+
+[node name="BadNogwattessHighlight" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(576, 324)
+scale = Vector2(4.5, 4.5)
+texture = ExtResource("5_2lpho")
+
+[node name="Glaswald text" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(576, 324)
+scale = Vector2(4.5, 4.5)
+texture = ExtResource("3_0cso3")
 
 [connection signal="mouse_entered" from="Orginele_kaart/Glaswald" to="." method="_on_glaswald_mouse_entered"]
 [connection signal="mouse_exited" from="Orginele_kaart/Glaswald" to="." method="_on_glaswald_mouse_exited"]
 [connection signal="pressed" from="Orginele_kaart/Glaswald" to="." method="_on_glaswald_pressed"]
+[connection signal="theme_changed" from="Orginele_kaart/Glaswald" to="." method="_on_glaswald_theme_changed"]
+[connection signal="mouse_entered" from="Orginele_kaart/badnog" to="." method="_on_badnog_mouse_entered"]
+[connection signal="mouse_exited" from="Orginele_kaart/badnog" to="." method="_on_badnog_mouse_exited"]
+[connection signal="pressed" from="Orginele_kaart/badnog" to="." method="_on_badnog_pressed"]
