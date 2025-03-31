@@ -4,21 +4,50 @@ extends Node2D
 func _input(event):
 	if event.is_action_pressed("Map"):  # Checkt of de actie "Map" wordt ingedrukt
 		get_tree().change_scene_to_file("res://scenes/game.tscn")
+	elif event.is_action_pressed("clicked"):
+		$"Container/Glaswald text".visible = false
+		$"Container/Bad-nogwatText".visible = false
+		$Container/Stausee_tekst.visible = false
+		$Container/BadMinNogwattesText.visible = false
+	#elif event.is_action_pressed("escape")
+		
+
+func _on_back_pressed():
+	get_tree().change_scene_to_file("res://scenes/game.tscn")
+
 
 func _on_glaswald_pressed() -> void:
-	$"Glaswald text".visible = true 
+	$"Container/Glaswald text".visible = true 
 
 func _on_glaswald_mouse_entered() -> void:
-	$"Glaswald highL".visible = true
+	$"Container/Glaswald highL".visible = true
 
 func _on_glaswald_mouse_exited() -> void:
-	$"Glaswald highL".visible = false
+	$"Container/Glaswald highL".visible = false
 
 func _on_badnog_pressed():
-	pass
+	$"Container/Bad-nogwatText".visible = true
 
 func _on_badnog_mouse_entered():
-	$BadNogwattessHighlight.visible = true
+	$Container/BadNogwattessHighlight.visible = true
 
 func _on_badnog_mouse_exited():
-	$BadNogwattessHighlight.visible = false
+	$Container/BadNogwattessHighlight.visible = false
+
+func _on_straus_pressed():
+	$Container/Stausee_tekst.visible = true
+
+func _on_straus_mouse_entered():
+	$Container/StauseeHighL.visible = true
+
+func _on_straus_mouse_exited():
+	$Container/StauseeHighL.visible = false
+
+func _on_bad_min_nog_pressed():
+	$Container/BadMinNogwattesText.visible = true
+
+func _on_bad_min_nog_mouse_entered():
+	$Container/BadMinNogwattesHighL.visible = true
+
+func _on_bad_min_nog_mouse_exited():
+	$Container/BadMinNogwattesHighL.visible = false

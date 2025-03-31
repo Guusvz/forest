@@ -1,11 +1,16 @@
-[gd_scene load_steps=10 format=3 uid="uid://cr8yd8731jvp1"]
+[gd_scene load_steps=33 format=3 uid="uid://cr8yd8731jvp1"]
 
 [ext_resource type="Texture2D" uid="uid://dqvm3fny5d8tq" path="res://assets/Map/Kaart.png" id="1_4xfga"]
 [ext_resource type="Script" uid="uid://dhefrukkj8ir" path="res://Scripts/map.gd" id="1_gldc4"]
 [ext_resource type="Texture2D" uid="uid://bdcpub6thuc41" path="res://assets/Map/Glaswald_text.png" id="3_0cso3"]
 [ext_resource type="Script" uid="uid://oqqcs8cltkn8" path="res://Scripts/orginele_kaart.gd" id="3_2klcf"]
 [ext_resource type="Texture2D" uid="uid://c1er751llo1jc" path="res://assets/Map/Glaswald_highlighted_kaart.png" id="4_2lpho"]
+[ext_resource type="Texture2D" uid="uid://b8kq2pb3x1mug" path="res://assets/Map/bad min nogwattes text.png" id="4_mlgqr"]
 [ext_resource type="Texture2D" uid="uid://dj8cw2gt43dy8" path="res://assets/Map/bad nogwattess highlight.png" id="5_2lpho"]
+[ext_resource type="Texture2D" uid="uid://ci8m6kbaart0d" path="res://assets/Map/Stausee highL.png" id="6_jh32y"]
+[ext_resource type="Texture2D" uid="uid://dxhe6jqjupn5j" path="res://assets/Map/Bad min nogwattes highL.png" id="7_blm8a"]
+[ext_resource type="Texture2D" uid="uid://dceu840cjaw03" path="res://assets/Map/bad-nogwat text.png" id="8_be0no"]
+[ext_resource type="Texture2D" uid="uid://ho36ghxv8udl" path="res://assets/Map/stausee.png" id="9_be0no"]
 
 [sub_resource type="Theme" id="Theme_2klcf"]
 
@@ -15,16 +20,89 @@ bg_color = Color(0.6, 0.6, 0.6, 0)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nakos"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
+[sub_resource type="Theme" id="Theme_be0no"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6k6j1"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_color = Color(0.8, 0.8, 0.8, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c70he"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_color = Color(0.8, 0.8, 0.8, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n1psn"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_color = Color(0.8, 0.8, 0.8, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wslke"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_color = Color(0.8, 0.8, 0.8, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gw3fx"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_color = Color(0.8, 0.8, 0.8, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c00ee"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_color = Color(0.8, 0.8, 0.8, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_be0no"]
+bg_color = Color(0, 0, 0, 0.180392)
+border_color = Color(0.8, 0.8, 0.8, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mo32q"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_color = Color(0.8, 0.8, 0.8, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mlgqr"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_color = Color(0.8, 0.8, 0.8, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p7tei"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_color = Color(0.8, 0.8, 0.8, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_blm8a"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_color = Color(0.8, 0.8, 0.8, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4b7dj"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_color = Color(0.8, 0.8, 0.8, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2cfcp"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_color = Color(0.8, 0.8, 0.8, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y2ir2"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_color = Color(0.8, 0.8, 0.8, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m335s"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5u2yt"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_color = Color(0.8, 0.8, 0.8, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sq6bu"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
 [node name="map" type="Node2D"]
+scale = Vector2(0.556, 0.556)
 script = ExtResource("1_gldc4")
 
-[node name="Orginele_kaart" type="Sprite2D" parent="."]
+[node name="Container" type="CanvasLayer" parent="."]
+scale = Vector2(0.556, 0.556)
+transform = Transform2D(0.556, 0, 0, 0.556, 0, 0)
+
+[node name="Orginele_kaart" type="Sprite2D" parent="Container"]
 position = Vector2(576, 324)
 scale = Vector2(4.5, 4.5)
 texture = ExtResource("1_4xfga")
 script = ExtResource("3_2klcf")
 
-[node name="Glaswald" type="Button" parent="Orginele_kaart"]
+[node name="Glaswald" type="Button" parent="Container/Orginele_kaart"]
 modulate = Color(1, 1, 1, 0)
 self_modulate = Color(1, 1, 1, 0)
 show_behind_parent = true
@@ -36,7 +114,7 @@ theme = SubResource("Theme_2klcf")
 theme_override_colors/icon_hover_color = Color(0, 1, 0, 1)
 theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
 
-[node name="badnog" type="Button" parent="Orginele_kaart"]
+[node name="badnog" type="Button" parent="Container/Orginele_kaart"]
 show_behind_parent = true
 offset_left = -41.5556
 offset_top = -44.4444
@@ -58,29 +136,113 @@ theme_override_colors/font_pressed_color = Color(0, 0, 0, 0)
 theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_2lpho")
 theme_override_styles/normal = SubResource("StyleBoxFlat_nakos")
 
-[node name="Glaswald highL" type="Sprite2D" parent="."]
+[node name="straus" type="Button" parent="Container/Orginele_kaart"]
+offset_left = -14.8905
+offset_top = -5.2534
+offset_right = -2.89048
+offset_bottom = 2.7466
+theme = SubResource("Theme_be0no")
+theme_override_styles/focus = SubResource("StyleBoxFlat_6k6j1")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_c70he")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_n1psn")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_wslke")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_gw3fx")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_c00ee")
+theme_override_styles/hover = SubResource("StyleBoxFlat_be0no")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_mo32q")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_mlgqr")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_p7tei")
+theme_override_styles/normal = SubResource("StyleBoxFlat_blm8a")
+
+[node name="bad_min_nog" type="Button" parent="Container/Orginele_kaart"]
+show_behind_parent = true
+offset_left = -28.0799
+offset_top = -36.8281
+offset_right = -16.0799
+offset_bottom = -28.8281
+
+[node name="Glaswald highL" type="Sprite2D" parent="Container"]
 visible = false
 visibility_layer = 2
 position = Vector2(576, 324)
 scale = Vector2(4.5, 4.5)
 texture = ExtResource("4_2lpho")
 
-[node name="BadNogwattessHighlight" type="Sprite2D" parent="."]
+[node name="BadNogwattessHighlight" type="Sprite2D" parent="Container"]
 visible = false
 position = Vector2(576, 324)
 scale = Vector2(4.5, 4.5)
 texture = ExtResource("5_2lpho")
 
-[node name="Glaswald text" type="Sprite2D" parent="."]
+[node name="StauseeHighL" type="Sprite2D" parent="Container"]
+visible = false
+position = Vector2(576, 324)
+scale = Vector2(4.5, 4.5)
+texture = ExtResource("6_jh32y")
+
+[node name="BadMinNogwattesHighL" type="Sprite2D" parent="Container"]
+visible = false
+position = Vector2(576, 324)
+scale = Vector2(4.5, 4.5)
+texture = ExtResource("7_blm8a")
+
+[node name="Glaswald text" type="Sprite2D" parent="Container"]
 visible = false
 position = Vector2(576, 324)
 scale = Vector2(4.5, 4.5)
 texture = ExtResource("3_0cso3")
 
-[connection signal="mouse_entered" from="Orginele_kaart/Glaswald" to="." method="_on_glaswald_mouse_entered"]
-[connection signal="mouse_exited" from="Orginele_kaart/Glaswald" to="." method="_on_glaswald_mouse_exited"]
-[connection signal="pressed" from="Orginele_kaart/Glaswald" to="." method="_on_glaswald_pressed"]
-[connection signal="theme_changed" from="Orginele_kaart/Glaswald" to="." method="_on_glaswald_theme_changed"]
-[connection signal="mouse_entered" from="Orginele_kaart/badnog" to="." method="_on_badnog_mouse_entered"]
-[connection signal="mouse_exited" from="Orginele_kaart/badnog" to="." method="_on_badnog_mouse_exited"]
-[connection signal="pressed" from="Orginele_kaart/badnog" to="." method="_on_badnog_pressed"]
+[node name="Bad-nogwatText" type="Sprite2D" parent="Container"]
+visible = false
+top_level = true
+position = Vector2(575.539, 321.942)
+scale = Vector2(4.5, 4.5)
+texture = ExtResource("8_be0no")
+
+[node name="Stausee_tekst" type="Sprite2D" parent="Container"]
+visible = false
+position = Vector2(575.54, 325.54)
+scale = Vector2(4.5, 4.5)
+texture = ExtResource("9_be0no")
+
+[node name="BadMinNogwattesText" type="Sprite2D" parent="Container"]
+position = Vector2(576, 324)
+scale = Vector2(4.5, 4.5)
+texture = ExtResource("4_mlgqr")
+
+[node name="back" type="Button" parent="Container"]
+offset_left = 9.00006
+offset_top = 581.396
+offset_right = 41.0001
+offset_bottom = 595.396
+scale = Vector2(4, 4)
+theme_override_styles/focus = SubResource("StyleBoxFlat_4b7dj")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_2cfcp")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_y2ir2")
+theme_override_styles/hover = SubResource("StyleBoxFlat_m335s")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5u2yt")
+theme_override_styles/normal = SubResource("StyleBoxFlat_sq6bu")
+
+[node name="Label" type="Label" parent="Container/back"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = -1.0
+offset_right = 46.0
+offset_bottom = 21.0
+theme_override_font_sizes/font_size = 12
+text = "back"
+
+[connection signal="mouse_entered" from="Container/Orginele_kaart/Glaswald" to="." method="_on_glaswald_mouse_entered"]
+[connection signal="mouse_exited" from="Container/Orginele_kaart/Glaswald" to="." method="_on_glaswald_mouse_exited"]
+[connection signal="pressed" from="Container/Orginele_kaart/Glaswald" to="." method="_on_glaswald_pressed"]
+[connection signal="theme_changed" from="Container/Orginele_kaart/Glaswald" to="." method="_on_glaswald_theme_changed"]
+[connection signal="mouse_entered" from="Container/Orginele_kaart/badnog" to="." method="_on_badnog_mouse_entered"]
+[connection signal="mouse_exited" from="Container/Orginele_kaart/badnog" to="." method="_on_badnog_mouse_exited"]
+[connection signal="pressed" from="Container/Orginele_kaart/badnog" to="." method="_on_badnog_pressed"]
+[connection signal="mouse_entered" from="Container/Orginele_kaart/straus" to="." method="_on_straus_mouse_entered"]
+[connection signal="mouse_exited" from="Container/Orginele_kaart/straus" to="." method="_on_straus_mouse_exited"]
+[connection signal="pressed" from="Container/Orginele_kaart/straus" to="." method="_on_straus_pressed"]
+[connection signal="mouse_entered" from="Container/Orginele_kaart/bad_min_nog" to="." method="_on_bad_min_nog_mouse_entered"]
+[connection signal="mouse_exited" from="Container/Orginele_kaart/bad_min_nog" to="." method="_on_bad_min_nog_mouse_exited"]
+[connection signal="pressed" from="Container/Orginele_kaart/bad_min_nog" to="." method="_on_bad_min_nog_pressed"]
+[connection signal="pressed" from="Container/back" to="." method="_on_back_pressed"]
