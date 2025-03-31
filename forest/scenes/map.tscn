@@ -206,6 +206,7 @@ scale = Vector2(4.5, 4.5)
 texture = ExtResource("9_be0no")
 
 [node name="BadMinNogwattesText" type="Sprite2D" parent="Container"]
+visible = false
 position = Vector2(576, 324)
 scale = Vector2(4.5, 4.5)
 texture = ExtResource("4_mlgqr")
