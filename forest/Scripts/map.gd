@@ -59,4 +59,4 @@ func _on_knie_mouse_entered():
 	$Container/KniebisHighlight.visible = true
 
 func _on_knie_mouse_exited():
-	$Container/Orginele_kaart/knie.visible
+	$Container/KniebisHighlight.visible = false
