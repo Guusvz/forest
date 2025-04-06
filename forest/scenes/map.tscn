@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://cr8yd8731jvp1"]
+[gd_scene load_steps=37 format=3 uid="uid://cr8yd8731jvp1"]
 
 [ext_resource type="Texture2D" uid="uid://dqvm3fny5d8tq" path="res://assets/Map/Kaart.png" id="1_4xfga"]
 [ext_resource type="Script" uid="uid://dhefrukkj8ir" path="res://Scripts/map.gd" id="1_gldc4"]
@@ -7,11 +7,14 @@
 [ext_resource type="Texture2D" uid="uid://c1er751llo1jc" path="res://assets/Map/Glaswald_highlighted_kaart.png" id="4_2lpho"]
 [ext_resource type="Texture2D" uid="uid://b8kq2pb3x1mug" path="res://assets/Map/bad min nogwattes text.png" id="4_mlgqr"]
 [ext_resource type="Texture2D" uid="uid://dj8cw2gt43dy8" path="res://assets/Map/bad nogwattess highlight.png" id="5_2lpho"]
+[ext_resource type="Texture2D" uid="uid://c4mhdmfjudvgh" path="res://assets/Map/Schapbach highlight.png" id="5_n1psn"]
 [ext_resource type="Texture2D" uid="uid://ci8m6kbaart0d" path="res://assets/Map/Stausee highL.png" id="6_jh32y"]
 [ext_resource type="Texture2D" uid="uid://dxhe6jqjupn5j" path="res://assets/Map/Bad min nogwattes highL.png" id="7_blm8a"]
 [ext_resource type="Texture2D" uid="uid://cyoni8swsetbf" path="res://assets/Map/Kniebis highlight.png" id="7_wslke"]
 [ext_resource type="Texture2D" uid="uid://dceu840cjaw03" path="res://assets/Map/bad-nogwat text.png" id="8_be0no"]
 [ext_resource type="Texture2D" uid="uid://ho36ghxv8udl" path="res://assets/Map/stausee.png" id="9_be0no"]
+[ext_resource type="Texture2D" uid="uid://sjuhv60okuk8" path="res://assets/Map/Kniebis text.png" id="13_gw3fx"]
+[ext_resource type="Texture2D" uid="uid://csq8ky6igha4p" path="res://assets/Map/Schapbach text.png" id="14_c00ee"]
 
 [sub_resource type="Theme" id="Theme_2klcf"]
 
@@ -170,12 +173,26 @@ offset_right = -6.89049
 offset_bottom = -57.2054
 scale = Vector2(1.04936, 0.5)
 
+[node name="schapbach" type="Button" parent="Container/Orginele_kaart"]
+show_behind_parent = true
+offset_left = -75.2422
+offset_top = 10.7338
+offset_right = -64.2422
+offset_bottom = 22.7338
+scale = Vector2(0.7, 0.7)
+
 [node name="Glaswald highL" type="Sprite2D" parent="Container"]
 visible = false
 visibility_layer = 2
 position = Vector2(576, 324)
 scale = Vector2(4.5, 4.5)
 texture = ExtResource("4_2lpho")
+
+[node name="SchapbachHighlight" type="Sprite2D" parent="Container"]
+visible = false
+position = Vector2(576, 324)
+scale = Vector2(4.5, 4.5)
+texture = ExtResource("5_n1psn")
 
 [node name="BadNogwattessHighlight" type="Sprite2D" parent="Container"]
 visible = false
@@ -216,7 +233,7 @@ texture = ExtResource("8_be0no")
 
 [node name="Stausee_tekst" type="Sprite2D" parent="Container"]
 visible = false
-position = Vector2(575.54, 325.54)
+position = Vector2(576, 324)
 scale = Vector2(4.5, 4.5)
 texture = ExtResource("9_be0no")
 
@@ -225,6 +242,19 @@ visible = false
 position = Vector2(576, 324)
 scale = Vector2(4.5, 4.5)
 texture = ExtResource("4_mlgqr")
+
+[node name="SchapbachText" type="Sprite2D" parent="Container"]
+process_mode = 3
+visible = false
+position = Vector2(576, 324)
+scale = Vector2(4.5, 4.5)
+texture = ExtResource("14_c00ee")
+
+[node name="KniebisText" type="Sprite2D" parent="Container"]
+visible = false
+position = Vector2(576, 324)
+scale = Vector2(4.5, 4.5)
+texture = ExtResource("13_gw3fx")
 
 [node name="back" type="Button" parent="Container"]
 offset_left = 9.00006
@@ -264,4 +294,7 @@ text = "back"
 [connection signal="mouse_entered" from="Container/Orginele_kaart/knie" to="." method="_on_knie_mouse_entered"]
 [connection signal="mouse_exited" from="Container/Orginele_kaart/knie" to="." method="_on_knie_mouse_exited"]
 [connection signal="pressed" from="Container/Orginele_kaart/knie" to="." method="_on_knie_pressed"]
+[connection signal="mouse_entered" from="Container/Orginele_kaart/schapbach" to="." method="_on_schapbach_mouse_entered"]
+[connection signal="mouse_exited" from="Container/Orginele_kaart/schapbach" to="." method="_on_schapbach_mouse_exited"]
+[connection signal="pressed" from="Container/Orginele_kaart/schapbach" to="." method="_on_schapbach_pressed"]
 [connection signal="pressed" from="Container/back" to="." method="_on_back_pressed"]

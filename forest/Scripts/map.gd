@@ -9,6 +9,8 @@ func _input(event):
 		$"Container/Bad-nogwatText".visible = false
 		$Container/Stausee_tekst.visible = false
 		$Container/BadMinNogwattesText.visible = false
+		$Container/KniebisText.visible = false 
+		$Container/SchapbachText.visible = false
 	elif event.is_action_pressed("escape"):
 		get_tree().quit()
 
@@ -53,10 +55,19 @@ func _on_bad_min_nog_mouse_exited():
 	$Container/BadMinNogwattesHighL.visible = false
 
 func _on_knie_pressed():
-	pass
+	$Container/KniebisText.visible = true 
 
 func _on_knie_mouse_entered():
 	$Container/KniebisHighlight.visible = true
 
 func _on_knie_mouse_exited():
 	$Container/KniebisHighlight.visible = false
+
+func _on_schapbach_pressed():
+	$Container/SchapbachText.visible = true
+
+func _on_schapbach_mouse_entered():
+	$Container/SchapbachHighlight.visible = true 
+
+func _on_schapbach_mouse_exited():
+	$Container/SchapbachHighlight.visible = false 
